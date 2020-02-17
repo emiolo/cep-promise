@@ -1,0 +1,15 @@
+{
+  "name": "@emiolo/cep-promise",
+  "version": "1.0.0",
+  "description": "Wrapper do pacote cep-promise para uso iterno",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antonio Eduardo",
+  "license": "ISC",
+  "dependencies": {
+    "cep-promise": "^3.0.9",
+    "throttle-debounce": "^2.1.0"
+  }
+}
