@@ -1,8 +1,12 @@
 {
   "name": "@emiolo/cep-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrapper do pacote cep-promise para uso iterno",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emiolo/cep-promise.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
