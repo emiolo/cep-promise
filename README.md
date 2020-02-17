@@ -14,8 +14,7 @@ npm i -S @emiolo/cep-promise
 <template>
   <div>
     <input v-model="cep" @input="getCep($event.target.value)" />
-    <pre align="left">{{ address }}</pre>
-    <pre align="left">{{ error }}</pre>
+    <pre align="left">{{ $data }}</pre>
   </div>
 </template>
 
@@ -27,19 +26,28 @@ export default {
     cep: '',
     address: null,
     error: null,
+    loading: false,
     getCep: () => null, // Declara uma função vazia
   }),
   created() {
     // Após a inicialização do componente, atribui a função
     // de captura "preguiçosa" do CEP, que só será executada
     // após 500ms que a última tecla for digitada
-    this.getCep = CepPromise.debounce(500, this.cepHandler)
+    this.getCep = CepPromise.debounce(this.cepHandler, {
+      delay: 500,
+      onLoading: this.setLoading,
+    })
   },
   methods: {
     cepHandler(result, error) {
       // Esse é o método responsável por exibir o resultado na tela
       this.address = result
       this.error = error
+    },
+    setLoading(status) {
+      // Esse é o método responsável por indicar se o CEP está sendo
+      // consultado no momento
+      this.loading = status
     },
   },
 }

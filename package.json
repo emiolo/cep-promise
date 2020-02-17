@@ -1,6 +1,6 @@
 {
   "name": "@emiolo/cep-promise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wrapper do pacote cep-promise para uso iterno",
   "main": "src/index.js",
   "repository": {
