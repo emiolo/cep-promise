@@ -13,7 +13,7 @@
   "author": "Antonio Eduardo",
   "license": "ISC",
   "dependencies": {
-    "cep-promise": "^3.0.9",
+    "cep-promise": "^4.4.0",
     "throttle-debounce": "^2.1.0"
   }
 }
